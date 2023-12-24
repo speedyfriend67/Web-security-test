@@ -1,0 +1,7 @@
+<script>
+var req = new XMLHttpRequest();
+req.open('GET', 'https://www.example.com/api/user', false);
+req.send(null);
+var headers = req.getAllResponseHeaders().toLowerCase();
+document.write(headers);
+</script>
