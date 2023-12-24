@@ -1,7 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Secure Page</title>
+</head>
+<body>
+<p>This is a secure page.</p>
 <script>
-var req = new XMLHttpRequest();
-req.open('GET', 'https://www.example.com/api/user', false);
-req.send(null);
-var headers = req.getAllResponseHeaders().toLowerCase();
-document.write(headers);
+// This script performs a security check
+var secureCheck = function() {
+  // Check if the page is loaded over HTTPS
+  if (window.location.protocol !== 'https:') {
+    alert('This page should be loaded over HTTPS for security reasons.');
+  }
+};
+// Run the security check
+secureCheck();
 </script>
+</body>
+</html>
